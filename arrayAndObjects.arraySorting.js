@@ -1,4 +1,5 @@
 const array = [1,10,4,7,8,56];
+const newArray = [];
 
 function sorter(array) {
     var swap,swapped,done = false;
@@ -16,8 +17,13 @@ function sorter(array) {
         }
       }
     }
+
+    for (var i =  array.length; i >=0; i --) {
+        array[i] % 2 == 0 ? newArray.push(array[i]) : '';
+    }
+
   
-    return array;
+    return newArray;
   }
 
 console.log(  sorter(array));
