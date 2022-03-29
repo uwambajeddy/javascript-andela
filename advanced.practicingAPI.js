@@ -11,7 +11,7 @@
               let avg = sum / childrenNumberArray.length;
             families.map(family=>{
                 family.fatherName == "Yves" ||  family.fatherName == "yves" ? reject("Yves is not an allowed dad in 2022") :'';
-                family.average = avg;
+                family.average = Math.round(avg);
             });
 
          resolve(families);
@@ -25,7 +25,7 @@
  
 
  let families = [
-     {fatherName:"ken",motherName:"salah",childrenNumber:5},
+     {fatherName:"ken",motherName:"salah",childrenNumber:7},
      {fatherName:"tiff",motherName:"bella",childrenNumber:2},
      {fatherName:"eddy",motherName:"keza",childrenNumber:2}
     ]
