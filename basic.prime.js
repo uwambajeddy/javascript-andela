@@ -4,9 +4,7 @@ const newArray = [];
 
 function primeSort(array){
     for(let a= 0; a <= array.length-1;a++){
-        if(array[a] % 2 !== 0){
-            newArray.push(array[a]);
-        }
+        array[a] % 2 !== 0 ? newArray.push(array[a]) : '';
     }
 
     return newArray;
