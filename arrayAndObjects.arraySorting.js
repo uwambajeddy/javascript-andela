@@ -1,29 +1,38 @@
 const array = [1,10,4,7,8,56];
-const newArray = [];
 
 function sorter(array) {
-    var swap,swapped,done = false;
-    while (!done) {
-      done = true;
-      for (var i = 1; i < array.length; i += 1) {
-        if (array[i - 1] > array[i]) {
-         swap = array[i];
-         array[i] = array[i-1];
-         array[i-1] = swap;
-         swapped =1;
-        }
-        if(swapped ==0){
-            done= true;
-        }
-      }
-    }
+  const newArray = [];
+  const isNotPrime = [];
+  let min = array[0],max = array[0],pos = 0;
+   for(let j=0; j< array.length;j++){
+     if(max < array[j]){
+       max = array[j];
+     }
+   }
+   
+   for(let b =0; b <  array.length; b++) {
+     
+     for(let a=0; a< array.length;a++){
+       if(array[a] !== null){
 
-    for (var i =  array.length; i >=0; i --) {
-        array[i] % 2 == 0 ? newArray.push(array[i]) : '';
-    }
+         if(min > array[a]){
+           min = array[a];
+           pos = a;
+          }
+          
+        }
+     }
 
+     array[pos] = null;
+     newArray[b] = min;
+     min = max;
+  }
   
-    return newArray;
+  for(let i =0; i <  newArray.length; i ++) {
+      array[i] % 2 == 0 ? isNotPrime.unshift(newArray[i]) : '';
+  }
+  
+    return isNotPrime;
   }
 
 console.log(  sorter(array));
