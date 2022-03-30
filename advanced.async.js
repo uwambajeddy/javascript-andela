@@ -7,7 +7,7 @@
  */
  setStudentAgeApi = (student, age) => {
  
-    return new Promise(function (resolve, reject) {
+    return new Promise( (resolve, reject)=> {
         setTimeout(() => {
             student.age = age;
             if(age < 0)
@@ -23,4 +23,4 @@
 
  let student = {name:"Eric" }
 
- setStudentAgeApi(student,20).then(data =>{ console.log(data)}).catch(err =>console.log(`Error occured : ${err}`));
+ setStudentAgeApi(student,-20).then(data => console.log(data)).catch(err => console.log(err));
