@@ -32,7 +32,7 @@ function sorter(array) {
       array[i] % 2 == 0 ? isNotPrime.unshift(newArray[i]) : '';
   }
   
-    return isNotPrime;
+    return isNotPrime; 
   }
 
 console.log(  sorter(array));
