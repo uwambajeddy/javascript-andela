@@ -1,4 +1,4 @@
-const array = [1,10,4,7,8,56,9,10,17,13,11];
+const array = [1,2,10,4,7,8,56,9,10,17,13,11];
 
 function sorter(array) {
   const newArray = [];
@@ -33,7 +33,9 @@ function sorter(array) {
     let primeSort = (array) => {
     let primeNumber = [], isPrime = false;
     array.filter( el => el >1 ).map(el =>{
+      if(el === 2) isPrime = true;
     for(let a=2; a < el;a++){
+      
        if( el % a == 0){
         isPrime = true;
         break;
