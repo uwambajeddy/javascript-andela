@@ -1,4 +1,4 @@
-const array = [1,10,4,7,8,56];
+const array = [1,10,4,7,8,56,9,10,17,13,11];
 
 function sorter(array) {
   const newArray = [];
