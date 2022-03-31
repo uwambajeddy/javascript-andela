@@ -11,7 +11,7 @@
         setTimeout(() => {
             student.age = age;
             if(age < 0)
-                reject ("Bad Age")
+                reject ("Bad Age");
          else
                   resolve(student)
         },
@@ -23,4 +23,4 @@
 
  let student = {name:"Eric" }
 
- setStudentAgeApi(student,-20).then(data => console.log(data)).catch(err => console.log(err));
+ setStudentAgeApi(student,20).then(data => console.log(data)).catch(err => console.log(err));

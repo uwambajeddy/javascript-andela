@@ -1,5 +1,5 @@
 
- setAverageChildrenApi = async(families, age) => {
+ setAverageChildrenApi =(families) => {
  
     return new Promise(function (resolve, reject) {
    setTimeout( () => {

@@ -4,6 +4,7 @@ function sorter(array) {
   const newArray = [];
   const isNotPrime = [];
   let min = array[0],max = array[0],pos = 0;
+  
    for(let j=0; j< array.length;j++){
      if(max < array[j]){
        max = array[j];
