@@ -31,16 +31,16 @@ function sorter(array) {
    
 
     let primeSort = (array) => {
-    let primeNumber = [], isPrime = true;
+    let primeNumber = [], isPrime = false;
     array.filter( el => el >1 ).map(el =>{
     for(let a=2; a < el;a++){
        if( el % a == 0){
-        isPrime = false;
+        isPrime = true;
         break;
        };  
     }
     isPrime ? primeNumber.push(el) : "";
-    isPrime = true;
+    isPrime = false;
 });
 
 return primeNumber;
